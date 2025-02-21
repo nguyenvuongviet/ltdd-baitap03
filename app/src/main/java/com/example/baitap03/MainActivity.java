@@ -38,5 +38,13 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, LinearLayoutActivity.class);
             startActivity(intent);
         });
+
+        // Lấy Button để chuyển màn hình sang Login
+        Button btnGoToLogin = findViewById(R.id.loginButton);
+        btnGoToLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Login.class);
+            startActivity(intent);
+        });
+
     }
 }
