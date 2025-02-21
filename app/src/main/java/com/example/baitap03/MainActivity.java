@@ -1,5 +1,6 @@
 package com.example.baitap03;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,8 +10,8 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     // Mảng chứa danh sách các hình nền
-    private int[] backgrounds = {R.drawable.bg1, R.drawable.bg2, R.drawable.bg3};
-    private Random random = new Random(); // Đối tượng random
+    private final int[] backgrounds = {R.drawable.bg1, R.drawable.bg2, R.drawable.bg3};
+    private final Random random = new Random(); // Đối tượng random
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +25,18 @@ public class MainActivity extends AppCompatActivity {
         int randomIndex = random.nextInt(backgrounds.length);
         mainLayout.setBackgroundResource(backgrounds[randomIndex]);
 
-        // Lấy Button
+        // Lấy Button đổi hình nền
         Button switchBackground = findViewById(R.id.switchBackground);
-
-        // Xử lý sự kiện click để thay đổi hình nền
         switchBackground.setOnClickListener(v -> {
             int newBackground = backgrounds[random.nextInt(backgrounds.length)];
             mainLayout.setBackgroundResource(newBackground);
+        });
+
+        // Lấy Button để chuyển màn hình
+        Button btnGoToLinearLayout = findViewById(R.id.btnGoToLinearLayout);
+        btnGoToLinearLayout.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, LinearLayoutActivity.class);
+            startActivity(intent);
         });
     }
 }

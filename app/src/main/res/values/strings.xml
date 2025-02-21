@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Baitap03</string>
+    <string name="text_01">01</string>
+    <string name="text_02">02</string>
+    <string name="text_03">03</string>
+    <string name="text_04">04</string>
+    <string name="text_05">05</string>
+    <string name="text_06">06</string>
+    <string name="text_07">07</string>
 </resources>

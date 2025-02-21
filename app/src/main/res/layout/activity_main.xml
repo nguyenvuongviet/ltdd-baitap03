@@ -18,9 +18,20 @@
             android:id="@+id/switchBackground"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thay đổi hình nền"
+            android:layout_centerInParent="true"
             android:padding="16dp"
-            android:layout_centerInParent="true"/>
+            android:text="Thay đổi hình nền" />
+
+        <!-- Nút để chuyển sang LinearLayoutActivity -->
+        <Button
+            android:id="@+id/btnGoToLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bài tập Linear Layout"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/switchBackground"
+            android:layout_marginTop="20dp"/>
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
